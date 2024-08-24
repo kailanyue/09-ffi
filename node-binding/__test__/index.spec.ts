@@ -1,8 +1,7 @@
 import test from 'ava'
-
-import { plus100 } from '../index'
+import { Algo } from '../index'
 
 test('sync function from native code', (t) => {
-  const fixture = 42
-  t.is(plus100(fixture), fixture + 100)
+  const algo1 = new Algo('sip');
+  t.is(algo1.hash('hello world'), '8170069951894177743')
 })
