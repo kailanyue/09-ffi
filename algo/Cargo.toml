@@ -6,7 +6,7 @@ edition = "2021"
 description = ""
 documentation = ""
 keywords = ["", ""]
-license = "MIT OR Apache-2.0"
+license = "MIT"
 repository = "https://github.com/kailanyue/09-ffi"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
