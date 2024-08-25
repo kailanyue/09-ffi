@@ -31,7 +31,7 @@ rye run ipython
 
 ### 4 在python中使用
 
-```python
+```py
 In [1]: from algo import  Algo
 
 In [2]: a = Algo("blake3")
@@ -43,6 +43,19 @@ In [4]: a.get_name()
 Out[4]: 'blake3'
 ```
 
+
+```py
+In [1]: from algo import Matrix
+
+In [2]: m1 = Matrix([[1, 2], [3, 4]])
+
+In [3]: m2 = Matrix([[5, 6], [7, 8]])
+
+In [4]: m3 = m1.mul(m2)
+
+In [6]: m3
+Out[6]: {19 22, 43 50}
+```
 ###  如果修改项目名
 
 要点：
