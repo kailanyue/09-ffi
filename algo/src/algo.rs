@@ -16,7 +16,7 @@ impl Algo {
         Self { r#type }
     }
 
-    pub fn hash(&self, v: String) -> String {
+    pub fn hash(&self, v: &str) -> String {
         match self.r#type {
             AlgoType::Blake3 => {
                 let hash = blake3::hash(v.as_bytes());
@@ -45,14 +45,14 @@ mod tests {
     #[test]
     fn test_default_hash() {
         let algo = Algo::new(AlgoType::Default);
-        let hash = algo.hash("hello".to_string());
+        let hash = algo.hash("hello");
         assert_eq!(hash, "16156531084128653017");
     }
 
     #[test]
     fn test_blake3_hash() {
         let algo = Algo::new(AlgoType::Blake3);
-        let hash = algo.hash("hello".to_string());
+        let hash = algo.hash("hello");
 
         assert_eq!(
             hash,

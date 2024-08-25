@@ -28,7 +28,22 @@ maturin develop
 rye run ipython
 ```
 
-### 如果修改项目名
+
+### 4 在python中使用
+
+```python
+In [1]: from algo import  Algo
+
+In [2]: a = Algo("blake3")
+
+In [3]: a.hash('hello world')
+Out[3]: 'd74981efa70a0c880b8d8c1985d075dbcbf679b99a5f9914e5aaf96b831a9e24'
+
+In [4]: a.get_name()
+Out[4]: 'blake3'
+```
+
+###  如果修改项目名
 
 要点：
 - pyproject.toml 中 project 名称，module-name

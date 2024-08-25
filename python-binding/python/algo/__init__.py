@@ -1,3 +1,6 @@
-from algo._lowlevel import hello
+from algo._lowlevel import Algo, hello
 
-__all__ = ["hello"]
+__all__ = [
+    "Algo",
+    "hello",
+]
