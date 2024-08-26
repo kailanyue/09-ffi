@@ -11,4 +11,6 @@ crate-type = ["cdylib"]
 
 [dependencies]
 algo = { workspace = true }
+paste = "1.0"
 pyo3 = "0.22"
+roaring = { version = "0.10", features = ["serde"] }

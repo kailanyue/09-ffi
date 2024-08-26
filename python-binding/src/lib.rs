@@ -1,9 +1,11 @@
 mod hasher;
 mod matrix;
+mod roaring;
 
 use hasher::PyAlgo;
 use matrix::PyMatrix;
 use pyo3::prelude::*;
+use roaring::{PyBitmap, PyTreemap};
 
 /// Prints a message.
 #[pyfunction]
@@ -17,5 +19,7 @@ fn _lowlevel(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(hello, m)?)?;
     m.add_class::<PyAlgo>()?;
     m.add_class::<PyMatrix>()?;
+    m.add_class::<PyBitmap>()?;
+    m.add_class::<PyTreemap>()?;
     Ok(())
 }
